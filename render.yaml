@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: god-mode-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: GEMINI_KEY
+        sync: false
+      - key: GNEWS_KEY
+        sync: false
